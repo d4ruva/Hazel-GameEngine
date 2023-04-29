@@ -8,7 +8,11 @@ extern Hazel::Application* Hazel::CreateApplication();
 
 int main(int argc, char** argv)
 {
-	printf("Hello Hazel\n");
+	Hazel::Log::Init();
+
+	HZ_CORE_WARN("Logger Intitalized");
+	HZ_CLIENT_WARN("Logger Intitalized");
+
 	auto app = Hazel::CreateApplication();
 	app ->Run();
 	delete app;
